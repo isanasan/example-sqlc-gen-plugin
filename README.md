@@ -1,0 +1,1 @@
+# example-sqlc-gen-plugin
