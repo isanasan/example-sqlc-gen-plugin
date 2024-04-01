@@ -1,0 +1,14 @@
+version: "2"
+
+plugins:
+- name: hello
+  wasm:
+    url: file://bin/sqlc-gen-hello.wasm
+    sha256: "0e59255bf35be5ac4990fc8e3e58af073467850a19e3ab97f85064ec36f705ea"
+sql:
+  - engine: "mysql"
+    queries: "query.sql"
+    schema: "schema.sql"
+    codegen:
+    - out: "db"
+      plugin: hello
