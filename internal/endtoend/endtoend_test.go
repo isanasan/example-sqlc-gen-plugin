@@ -31,7 +31,7 @@ func TestEndToEnd(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	for _, dir := range FindTests(t, "testdata") {
+	for _, dir := range findTests(t, "testdata") {
 		dir := dir
 		t.Run(dir, func(t *testing.T) {
 			yamlPath := filepath.Join(dir, "sqlc.yaml")
@@ -63,7 +63,7 @@ func TestEndToEnd(t *testing.T) {
 	}
 }
 
-func FindTests(t *testing.T, root string) []string {
+func findTests(t *testing.T, root string) []string {
 	t.Helper()
 	var dirs []string
 	err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
