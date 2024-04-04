@@ -12,7 +12,7 @@ import (
 	"github.com/google/go-cmp/cmp"
 )
 
-func TestMain(t *testing.T) {
+func TestEndToEnd(t *testing.T) {
 	wasmPath := filepath.Join("..", "..", "bin", "sqlc-gen-hello.wasm")
 	if _, err := os.Stat(wasmPath); err != nil {
 		t.Fatalf("sqlc-gen-hello.wasm not found: %s", err)
