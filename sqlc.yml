@@ -4,7 +4,7 @@ plugins:
 - name: hello
   wasm:
     url: file://bin/sqlc-gen-hello.wasm
-    sha256: "0e59255bf35be5ac4990fc8e3e58af073467850a19e3ab97f85064ec36f705ea"
+    sha256: "ce975d1fafe9e3184310f650eac61d9c1019cd074346a7b4521b196686a3a271"
 sql:
   - engine: "mysql"
     queries: "query.sql"

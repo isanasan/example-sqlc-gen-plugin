@@ -4,7 +4,7 @@
 
 ```bash
 cd plugin
-tinygo build -o ../bin/sqlc-gen-hello.wasm -gc=leaking -scheduler=none -target=wasi -no-debug
+GOOS=wasip1 GOARCH=wasm go build -o ../bin/sqlc-gen-hello.wasm main.go
 ```
 
 sha256生成
